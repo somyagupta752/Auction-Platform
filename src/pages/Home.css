@@ -1,0 +1,11 @@
+/* PaymentsTool.css */
+
+.bg-white {
+    background-color: #fff;
+}
+
+.dark:bg-gray-900 {
+    background-color: #333; /* Change this to your desired dark mode background color */
+}
+
+/* Add your other styles here */
