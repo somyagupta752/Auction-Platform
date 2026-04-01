@@ -3,22 +3,22 @@ name: SonarCloud analysis
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   Analysis:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # ✅ Step 1: Checkout code (VERY IMPORTANT)
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Analyze with SonarCloud
-        uses: actions/checkout@v3
+      # ✅ Step 2: SonarCloud scan
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
             -Dsonar.projectKey=somyagupta752_Auction-Platform
             -Dsonar.organization=auctionplatform
-            -Dsonar.sources=.
