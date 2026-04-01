@@ -19,6 +19,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=auctionplatform
+            -Dsonar.projectKey=somyagupta752_Auction-Platform
             -Dsonar.organization=auctionplatform
             -Dsonar.sources=.
